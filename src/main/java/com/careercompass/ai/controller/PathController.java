@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/paths")
-@SuppressWarnings("null")
+
 public class PathController {
 
     private final CareerPathRepository pathRepo;

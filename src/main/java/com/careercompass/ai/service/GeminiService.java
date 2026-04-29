@@ -104,7 +104,7 @@ public class GeminiService {
             String cleanJson = result.replaceAll("```json", "").replaceAll("```", "").trim();
             return objectMapper.readTree(cleanJson);
         } catch (Exception e) {
-            log.error("Error parsing Quiz JSON: {}", e.getMessage());
+            System.err.println("Error parsing Quiz JSON: " + e.getMessage());
             return null;
         }
     }

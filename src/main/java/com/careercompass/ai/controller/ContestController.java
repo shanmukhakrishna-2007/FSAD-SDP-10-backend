@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/contests")
-@SuppressWarnings("null")
+
 public class ContestController {
 
     private final ContestRepository contestRepository;

@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/courses")
-@SuppressWarnings("null")
+
 public class CourseController {
 
     private final CourseRepository courseRepo;

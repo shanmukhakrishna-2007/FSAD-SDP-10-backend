@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * Admin email: shannu1@gmail.com
  */
 @Configuration
-@SuppressWarnings("null")
+
 public class AdminSeeder {
 
     private static final Logger log = LoggerFactory.getLogger(AdminSeeder.class);

@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/certificates")
-@SuppressWarnings("null")
+
 public class CertificateController {
 
     private final CertificateRepository certRepo;

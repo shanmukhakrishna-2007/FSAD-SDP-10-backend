@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/quizzes")
-@SuppressWarnings("null")
+
 public class QuizController {
 
     private final QuizRepository quizRepo;

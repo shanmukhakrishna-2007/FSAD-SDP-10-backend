@@ -5,7 +5,6 @@ import com.careercompass.ai.model.User;
 import com.careercompass.ai.service.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +22,7 @@ public class AuthController {
      * Returns a generic message — never reveals whether the email was taken.
      */
     @PostMapping("/register")
-    public ResponseEntity<GenericResponse> register(@Valid @RequestBody RegisterRequest request) {
+    public ResponseEntity<GenericResponse> register(@RequestBody RegisterRequest request) {
         return ResponseEntity.ok(authService.register(request));
     }
 
@@ -34,7 +33,7 @@ public class AuthController {
      */
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(
-            @Valid @RequestBody LoginRequest request,
+            @RequestBody LoginRequest request,
             HttpServletRequest httpReq,
             HttpServletResponse httpRes) {
         return ResponseEntity.ok(authService.login(request, httpReq, httpRes));
@@ -46,7 +45,7 @@ public class AuthController {
      */
     @PostMapping("/verify-mfa")
     public ResponseEntity<AuthResponse> verifyMfa(
-            @Valid @RequestBody VerifyMfaRequest request,
+            @RequestBody VerifyMfaRequest request,
             HttpServletResponse httpRes) {
         return ResponseEntity.ok(authService.verifyMfa(request, httpRes));
     }
@@ -64,7 +63,7 @@ public class AuthController {
      * Always returns a generic message regardless of whether the email exists.
      */
     @PostMapping("/forgot-password")
-    public ResponseEntity<GenericResponse> forgotPassword(@Valid @RequestBody ForgotPasswordRequest request) {
+    public ResponseEntity<GenericResponse> forgotPassword(@RequestBody ForgotPasswordRequest request) {
         return ResponseEntity.ok(authService.forgotPassword(request));
     }
 
@@ -72,7 +71,7 @@ public class AuthController {
      * Reset password using an expiring, single-use token.
      */
     @PostMapping("/reset-password")
-    public ResponseEntity<GenericResponse> resetPassword(@Valid @RequestBody ResetPasswordRequest request) {
+    public ResponseEntity<GenericResponse> resetPassword(@RequestBody ResetPasswordRequest request) {
         return ResponseEntity.ok(authService.resetPassword(request));
     }
 

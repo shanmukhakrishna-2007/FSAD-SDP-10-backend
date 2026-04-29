@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/problems")
-@SuppressWarnings("null")
+
 public class ProblemController {
 
     private final ProblemRepository problemRepository;

@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
-@SuppressWarnings("null")
+
 public class AuthService {
 
     private static final Logger log = LoggerFactory.getLogger(AuthService.class);

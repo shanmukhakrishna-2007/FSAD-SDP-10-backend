@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
-@SuppressWarnings("null")
+
 public class AdminService {
 
     private final UserRepository userRepository;
